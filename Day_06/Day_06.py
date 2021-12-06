@@ -13,15 +13,9 @@ def calculate_num_fish(days):
             num_fish = fishdata[key]
             if key <= 0:
                 next_fishdata[8] = num_fish
-                if 6 in next_fishdata.keys():
-                    next_fishdata[6] += num_fish  
-                else:
-                    next_fishdata[6] = num_fish
+                next_fishdata[6] += num_fish  
             else:
-                if key-1 in next_fishdata.keys():
-                    next_fishdata[key-1] += num_fish
-                else:
-                    next_fishdata[key-1] = num_fish
+                next_fishdata[key-1] += num_fish
 
         fishdata = next_fishdata
 
