@@ -14,6 +14,10 @@ print("Solution 1:", min(distances))
 # Puzzle 2
 distances = []
 for i in range(min(data), max(data)+1):
-    distances.append(sum(sum(range(abs(j-i)+1)) for j in data))
+    # My own
+    #distances.append(sum(sum(range(abs(j-i)+1)) for j in data))
+
+    # "Borrowed" formula
+    distances.append(sum(int((abs(j-i) / 2) * (2 + (abs(j-i) - 1))) for j in data))
 
 print("Solution 2:", min(distances))
