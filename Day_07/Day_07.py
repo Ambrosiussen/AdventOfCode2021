@@ -1,5 +1,3 @@
-from collections import Counter
-
 data = open("C:/Personal/AdventOfCode2021/Day_07/input.txt").read().split(",")
 data = list(map(int, data))
 
